@@ -1,0 +1,91 @@
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    background: #333;
+    height: 100vh;
+}
+ul{
+    margin: 0;
+    padding: 0 100px;
+    box-sizing: border-box
+}
+ul li{
+    position: relative;
+    list-style: none;
+    font-size: 25px;
+    font-weight: 700;
+    color: #777;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    margin: 5px;
+    display: inline-flex;
+    transition: 0.5s;
+    border: 1px solid #333;
+}
+ul li:hover{
+    color: #fff;
+}
+ul li:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #000;
+    z-index: -1;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+ul li:hover:before{
+    transform-origin: left;
+    transform: scaleX(1);
+    transition: transform 0.5s;
+}
+ul li:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: #000;
+    z-index: -1;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.5s;
+}
+ul li:hover:after{
+    transform-origin: right;
+    transform: scaleX(1);
+    transition: transform 0.5s;
+}
+ul li:nth-child(8n+1):before, ul li:nth-child(8n+1):after{
+    background: #72DBE8;
+}
+ul li:nth-child(8n+2):before, ul li:nth-child(8n+2):after{
+    background: #E8A868;
+}
+ul li:nth-child(8n+3):before, ul li:nth-child(8n+3):after{
+    background: #9BA6E8;
+}
+ul li:nth-child(8n+4):before, ul li:nth-child(8n+4):after{
+    background: #8D1ED9;
+}
+ul li:nth-child(8n+5):before, ul li:nth-child(8n+5):after{
+    background: #D91E6F;
+}
+ul li:nth-child(8n+6):before, ul li:nth-child(8n+6):after{
+    background: #92D95B;
+}
+ul li:nth-child(8n+7):before, ul li:nth-child(8n+7):after{
+    background: #BF9C8E;
+}
+ul li:nth-child(8n+8):before, ul li:nth-child(8n+8):after{
+    background: #14B309;
+}
